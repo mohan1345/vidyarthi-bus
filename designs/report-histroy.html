@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f0fb",
+                    "outline-variant": "#c3c6d7",
+                    "on-surface": "#191b23",
+                    "on-tertiary-fixed": "#002109",
+                    "surface": "#faf8ff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#0b1c30",
+                    "primary-fixed": "#dbe1ff",
+                    "on-background": "#191b23",
+                    "on-tertiary": "#ffffff",
+                    "background": "#faf8ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#0053db",
+                    "secondary": "#505f76",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "on-surface-variant": "#434655",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e1e2ed",
+                    "tertiary-container": "#007e37",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "surface-dim": "#d9d9e5",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#d3e4fe",
+                    "surface-container-low": "#f3f3fe",
+                    "on-primary-fixed": "#00174b",
+                    "on-primary-container": "#eeefff",
+                    "surface-variant": "#e1e2ed",
+                    "surface-container-high": "#e7e7f3",
+                    "on-secondary-container": "#54647a",
+                    "surface-bright": "#faf8ff",
+                    "tertiary": "#006229",
+                    "on-tertiary-container": "#c1ffc5",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#2e3039",
+                    "surface-container": "#ededf9",
+                    "tertiary-fixed": "#6bff8f",
+                    "secondary-container": "#d0e1fb",
+                    "primary-container": "#2563eb",
+                    "outline": "#737686",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "primary": "#004ac6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "base": "4px",
+                    "touch-target": "48px",
+                    "md": "16px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "status-label": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "status-label": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            background-color: #c3c6d7; /* outline-variant */
+            z-index: 0;
+        }
+        .timeline-item:last-child .timeline-line::before {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-surface-container-low dark:bg-surface-dim flex justify-between items-center w-full px-md h-touch-target">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="directions_bus">directions_bus</span>
+<h1 class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim">Vidyarthi-Bus</h1>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="wifi_off">wifi_off</span>
+</div>
+</header>
+<main class="px-md mt-lg">
+<!-- Screen Header -->
+<div class="mb-lg">
+<h2 class="font-display-lg text-display-lg text-on-surface">Travel History</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Your recent bus reports and updates</p>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-sm overflow-x-auto pb-md no-scrollbar">
+<button class="px-lg py-sm rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow-sm">All</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-variant">Bus 101</button>
+<button class="px-lg py-sm rounded-full border border-outline-variant bg-surface text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-variant">Bus 202</button>
+</div>
+<!-- Timeline -->
+<div class="mt-md space-y-0">
+<!-- Timeline Item 1 -->
+<div class="timeline-item relative flex gap-md pb-lg">
+<div class="timeline-line relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center border-4 border-surface">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+</div>
+</div>
+<div class="flex-1 pt-2">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">08:30 AM</span>
+<div class="flex items-center gap-xs px-sm py-1 rounded-full bg-tertiary/10 text-tertiary">
+<span class="material-symbols-outlined text-[14px]" data-icon="event_seat" style="font-variation-settings: 'FILL' 1;">event_seat</span>
+<span class="font-status-label text-status-label">SEATS AVAILABLE</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Bus 101</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Station: Rural Hub North</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="timeline-item relative flex gap-md pb-lg">
+<div class="timeline-line relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border-4 border-surface">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="history">history</span>
+</div>
+</div>
+<div class="flex-1 pt-2">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">07:45 AM</span>
+<div class="flex items-center gap-xs px-sm py-1 rounded-full bg-error/10 text-error">
+<span class="material-symbols-outlined text-[14px]" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-status-label text-status-label">CROWDED</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Bus 202</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Station: Village Square West</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="timeline-item relative flex gap-md pb-lg">
+<div class="timeline-line relative z-10 flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border-4 border-surface">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="history">history</span>
+</div>
+</div>
+<div class="flex-1 pt-2">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md shadow-sm opacity-80">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Yesterday</span>
+<div class="flex items-center gap-xs px-sm py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-status-label text-status-label">ON TIME</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Bus 101</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Station: Main Campus Gate</p>
+</div>
+</div>
+</div>
+<!-- Bento Card for Statistics -->
+<div class="bg-primary text-on-primary rounded-xl p-lg mt-md mb-lg relative overflow-hidden">
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm opacity-80 uppercase">Efficiency Report</span>
+<h3 class="font-display-lg text-display-lg mt-xs">92% On-Time</h3>
+<p class="font-body-md text-body-md mt-sm opacity-90 max-w-[200px]">Your frequent route (Bus 101) remains the most reliable this week.</p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10" data-icon="trending_up">trending_up</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-sm py-xs bg-surface-container dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-variant transition-transform duration-75 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-variant transition-transform duration-75 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+<span class="font-label-sm text-label-sm">Routes</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-xl px-4 py-1 transition-transform duration-75 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="history" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-variant transition-transform duration-75 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+</body></html>

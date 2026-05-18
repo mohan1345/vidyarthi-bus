@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shared Auto Contacts - Vidyarthi-Bus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f0fb",
+                        "outline-variant": "#c3c6d7",
+                        "on-surface": "#191b23",
+                        "on-tertiary-fixed": "#002109",
+                        "surface": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-fixed": "#dbe1ff",
+                        "on-background": "#191b23",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf8ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0053db",
+                        "secondary": "#505f76",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "on-surface-variant": "#434655",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e2ed",
+                        "tertiary-container": "#007e37",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f3f3fe",
+                        "on-primary-fixed": "#00174b",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#e1e2ed",
+                        "surface-container-high": "#e7e7f3",
+                        "on-secondary-container": "#54647a",
+                        "surface-bright": "#faf8ff",
+                        "tertiary": "#006229",
+                        "on-tertiary-container": "#c1ffc5",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3039",
+                        "surface-container": "#ededf9",
+                        "tertiary-fixed": "#6bff8f",
+                        "secondary-container": "#d0e1fb",
+                        "primary-container": "#2563eb",
+                        "outline": "#737686",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "primary": "#004ac6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "touch-target": "48px",
+                        "md": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "status-label": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "status-label": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-md h-touch-target bg-surface-container-low">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="directions_bus">directions_bus</span>
+<h1 class="text-title-lg font-title-lg font-bold text-primary">Vidyarthi-Bus</h1>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="wifi_off">wifi_off</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male student wearing a clean, modern white polo shirt. The lighting is soft and natural, coming from a high-key source in a minimalist educational setting. The background is a soft-focus campus hallway with clean architectural lines, maintaining a modern and dependable corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzz6PZmctz8umNLr4KD-e3aRG_VZUcRh_U0OPYdFQ9oMSdNSPeLLGhjJXvy9Ep5N2yGOucMNpidrrbBYfMbIMSO0RmH_d1w8aCzB55tE4EHXI51NRTvCEI5_uOUHBhDveFM7bZ6imWBp5Xfty4bC6QuARUBLIm6CjII435uCkdqKAba80oEAsdSBf3N5yyeD7MJSAB-Y2NuEZvB0toFzT51OLF6Bv74mAZLt9vfOq53GuLfjoiAUsGaM_vHP4y1HDBMw-awjzs_HnY"/>
+</div>
+</div>
+</header>
+<main class="mt-touch-target pb-32 px-md pt-lg">
+<!-- Section Header -->
+<div class="mb-lg">
+<h2 class="text-headline-md font-headline-md text-on-surface">Shared Auto &amp; Vans</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Alternative transport for verified routes</p>
+</div>
+<!-- Bento Layout for Contacts -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Contact Card: Ramesh (Auto) -->
+<div class="bg-surface-container-low rounded-xl p-md border border-outline-variant flex flex-col justify-between hover:bg-surface-variant transition-colors duration-200">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-md">
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a friendly Indian auto-rickshaw driver in his 40s. He is wearing a professional khaki uniform. The lighting is bright and outdoor-focused, reflecting a reliable and hardworking personality. The visual style is crisp and modern, fitting a high-utility service application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe1RVE3EA6gGoLZPKfxL_rD7N8Ysm7YzEURY-q717MD_F_6X4u7Iw3IWBnlDi2ULR94pd_3kqIUU0o_LBy131nZZ7-pRtGpYqfvC11HaTQxIPuW_qprCA5hmOO5Fnsz09g0YupUwY2QVflyUhS7UWsh1cvmzYC8duqwMP0JxJrfzbon-DacZtkoJaCYDXvFc7rD-Vn5e7jhLt2WAkuZwMf7iV9-2AFGlC9mO-n8ciUigEqihlvNFyJobcT6oThV-uoYASaVZCZZjyp"/>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface">Ramesh (Auto)</h3>
+<div class="flex items-center gap-xs text-primary mt-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="route">route</span>
+<span class="text-label-sm font-label-sm">Hassan Circle</span>
+</div>
+</div>
+</div>
+<div class="bg-tertiary-container/10 px-sm py-xs rounded-full">
+<span class="text-tertiary font-status-label text-status-label">ACTIVE</span>
+</div>
+</div>
+<div class="flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<span class="text-body-md font-body-md text-on-surface-variant">Phone Number</span>
+<span class="text-title-lg font-title-lg text-primary tracking-wider">+91 98450 12345</span>
+</div>
+<button class="w-full h-touch-target bg-primary text-on-primary rounded-lg font-title-lg flex items-center justify-center gap-sm active:scale-95 transition-transform duration-100 shadow-lg">
+<span class="material-symbols-outlined" data-icon="call" data-weight="fill" style="font-variation-settings: 'FILL' 1;">call</span>
+<span>Call Ramesh</span>
+</button>
+</div>
+</div>
+<!-- Contact Card: Suresh (Van) -->
+<div class="bg-surface-container-low rounded-xl p-md border border-outline-variant flex flex-col justify-between hover:bg-surface-variant transition-colors duration-200">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-md">
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A portrait of a smiling middle-aged professional van driver in a bright, clean environment. He is wearing a simple collared shirt. The background suggests a modern transportation hub with high-key lighting. The overall mood is dependable, efficient, and friendly, aligned with corporate-modern UI aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnRlFnngO1EV5pJmdG4rRorKJrB2fysW73z77fX21fvKS7PI7G2nhVfcnD5HJh2C6t888fMoNKd5XXDh40v9593PfLksvejbblt5i4swJfXxorq7alN4Bmqr37_8aUE1qtzSuRE-RI6aqsvshbGXSF2n_j-UMdJEV2UDLS0fY0KEl_THxv_7lFDEP_-5FJfXz5MRbEBFw1MPN6Skt1z7B2FF3uqkgOpSZYFM3WMRqfAHQ-iOdp-VxYfOXWqc0GCfzAH800c-DUQH4x"/>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface">Suresh (Van)</h3>
+<div class="flex items-center gap-xs text-primary mt-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="school">school</span>
+<span class="text-label-sm font-label-sm">City College</span>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container/20 px-sm py-xs rounded-full">
+<span class="text-secondary font-status-label text-status-label">NEXT: 10 MIN</span>
+</div>
+</div>
+<div class="flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<span class="text-body-md font-body-md text-on-surface-variant">Phone Number</span>
+<span class="text-title-lg font-title-lg text-primary tracking-wider">+91 98450 67890</span>
+</div>
+<button class="w-full h-touch-target bg-primary text-on-primary rounded-lg font-title-lg flex items-center justify-center gap-sm active:scale-95 transition-transform duration-100 shadow-lg">
+<span class="material-symbols-outlined" data-icon="call" data-weight="fill" style="font-variation-settings: 'FILL' 1;">call</span>
+<span>Call Suresh</span>
+</button>
+</div>
+</div>
+<!-- Offline Information Card -->
+<div class="md:col-span-2 bg-inverse-surface text-inverse-on-surface rounded-xl p-md flex items-center gap-md">
+<div class="bg-primary-container/20 p-sm rounded-full">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="cloud_off">cloud_off</span>
+</div>
+<div>
+<p class="text-body-md font-body-md">Currently Offline</p>
+<p class="text-label-sm font-label-sm opacity-80">Showing contacts from last sync: 2 mins ago</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-sm py-xs bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant rounded-xl transition-colors">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+<span class="text-label-sm font-label-sm">Routes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant rounded-xl transition-colors">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-label-sm font-label-sm">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant rounded-xl transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f0fb",
+                        "outline-variant": "#c3c6d7",
+                        "on-surface": "#191b23",
+                        "on-tertiary-fixed": "#002109",
+                        "surface": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-fixed": "#dbe1ff",
+                        "on-background": "#191b23",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf8ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0053db",
+                        "secondary": "#505f76",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "on-surface-variant": "#434655",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e2ed",
+                        "tertiary-container": "#007e37",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f3f3fe",
+                        "on-primary-fixed": "#00174b",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#e1e2ed",
+                        "surface-container-high": "#e7e7f3",
+                        "on-secondary-container": "#54647a",
+                        "surface-bright": "#faf8ff",
+                        "tertiary": "#006229",
+                        "on-tertiary-container": "#c1ffc5",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3039",
+                        "surface-container": "#ededf9",
+                        "tertiary-fixed": "#6bff8f",
+                        "secondary-container": "#d0e1fb",
+                        "primary-container": "#2563eb",
+                        "outline": "#737686",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "primary": "#004ac6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "touch-target": "48px",
+                        "md": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "status-label": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "status-label": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-surface-container-low flex justify-between items-center w-full px-md h-touch-target">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="directions_bus">directions_bus</span>
+<h1 class="text-title-lg font-title-lg font-bold text-primary">Vidyarthi-Bus</h1>
+</div>
+<div class="flex items-center gap-xs bg-error-container text-on-error-container px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]" data-icon="wifi_off">wifi_off</span>
+<span class="text-label-sm font-label-sm">Offline</span>
+</div>
+</header>
+<main class="px-md mt-lg space-y-lg">
+<!-- Greeting Section -->
+<section>
+<h2 class="text-headline-md font-headline-md text-on-surface">Namaste, Aryan</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Your journey data is synced for offline use.</p>
+</section>
+<!-- Current Route Card (Bento Style Emphasis) -->
+<section>
+<div class="bg-surface-container-high border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="flex justify-between items-start mb-md">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Current Route</span>
+<h3 class="text-display-lg font-display-lg text-on-surface mt-xs">Bus 101</h3>
+<p class="text-title-lg font-title-lg text-on-surface-variant">Hassan Junction</p>
+</div>
+<div class="bg-[#FFEB3B]/20 text-[#F57F17] px-3 py-1 rounded-full flex items-center gap-1 border border-[#FBC02D]/30">
+<span class="w-2 h-2 rounded-full bg-[#F57F17]"></span>
+<span class="text-status-label font-status-label">Almost Full</span>
+</div>
+</div>
+<div class="flex items-center gap-md py-sm border-t border-outline-variant">
+<div class="flex -space-x-2">
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-surface-container-high" data-alt="A close-up portrait of a young South Asian male student smiling warmly, set against a blurred academic background. The lighting is natural and bright, emphasizing a dependable and modern student persona in a light-mode aesthetic. The image uses a clean, high-contrast style with soft shadows to fit a professional UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2raEj25g0j96erk3J1VB94PnbmowI9yO_VOAY99fgnpu5LnBrEo2R21MNh2TjKMjGIgq3hbfx7kqKJKFaA1b1lSyXm6lGZZUztmfPRdwanG_NVXA6DNy4genQRt9FaHhPpO_rvdRRsjdAjRgzrRS7_AYnS0hZdGQFQ7TQXFhbxoQm2eD7UyARHcqTu-1uhXhAeOc_UF-4MREm8T37Prw-4L-ih6brnae2t75t8WRiZyu9My1FmIRbtaJFcq1RC-LWvpv_r5UXvYzQ"/>
+<img alt="Student" class="w-8 h-8 rounded-full border-2 border-surface-container-high" data-alt="A professional headshot of a young woman with a friendly expression, illuminated by soft morning sunlight. She is dressed in casual student attire, reflecting a modern and efficient lifestyle. The background is a minimalist urban setting that complements the corporate modern aesthetic of the Vidyarthi-Bus application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBanHuZYjf_A1mvJE3EYjFHvS2Ok7n9SSdbWBzk4a20A20aVBEmSuSIgsoWDZd8rR_e0Sb7eQzhbFSZRjkqinB00JXqISdINt0vqOPncQnMASDiPXtKCZrcLUcYyBiLi9CGiT3O-ZogpbXTG6K3gAjnVMoERFiDBEP1I9n_hIkWkP2qyaQhZeo_janMiRGFXekysl8vQNcSoZ8bXTojQwZn5wL97nRwC_he79pLFNGYvGqGj0hp5tjBQZPFXmUqpY3Qy4zflJnBNMy6"/>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">12 students reporting live</p>
+</div>
+</div>
+</section>
+<!-- Quick Report Section -->
+<section class="space-y-sm">
+<h3 class="text-title-lg font-title-lg text-on-surface">Update Capacity</h3>
+<div class="grid grid-cols-3 gap-sm">
+<button class="flex flex-col items-center justify-center bg-tertiary-container/10 border border-tertiary/20 rounded-xl py-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-[32px] mb-xs" data-icon="event_seat">event_seat</span>
+<span class="text-label-sm font-label-sm text-tertiary font-bold text-center">Seats Available</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-orange-100 border border-orange-300 rounded-xl py-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-orange-700 text-[32px] mb-xs" data-icon="group">group</span>
+<span class="text-label-sm font-label-sm text-orange-800 font-bold text-center">Almost Full</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-error-container border border-error/20 rounded-xl py-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-error text-[32px] mb-xs" data-icon="group_off">group_off</span>
+<span class="text-label-sm font-label-sm text-error font-bold text-center">Full</span>
+</button>
+</div>
+</section>
+<!-- Recent Reports (Asymmetric/Modern List) -->
+<section class="space-y-sm">
+<div class="flex justify-between items-center">
+<h3 class="text-title-lg font-title-lg text-on-surface">Recent Reports</h3>
+<button class="text-primary text-label-sm font-label-sm">View All</button>
+</div>
+<div class="space-y-sm">
+<!-- Report Item 1 -->
+<div class="flex items-center gap-md bg-surface-container-low p-sm rounded-xl border border-transparent hover:border-outline-variant transition-colors">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface">Bus 101</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant">2m ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">You reported: Almost Full</p>
+</div>
+</div>
+<!-- Report Item 2 -->
+<div class="flex items-center gap-md bg-surface-container-low p-sm rounded-xl border border-transparent hover:border-outline-variant transition-colors">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface">Bus 204</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant">15m ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">Reported: Seats Available</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Snippet (Small Contextual Card) -->
+<section class="rounded-xl overflow-hidden relative h-32 border border-outline-variant">
+<img alt="Map" class="w-full h-full object-cover grayscale opacity-50" data-alt="A clean, minimalist map interface showing the rural topography of Hassan, India. The map uses a light-mode color palette with primary blue indicators for bus routes and transit hubs. The style is modern and high-utility, focusing on clarity and legible transit paths against a soft gray background." data-location="Hassan, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHpcIDkVQVX-OkchtKc0vHCGVe4cIelgVVyjYEQlmL-JSNNs5ZPbbr41tf3MINOJP1jJ7YdEeO9YeZE_h9OKE046lgDF2nCVH14ilJJj0-6OM6C49a8QBCmrZt4FuA2drjhrB0Ot6Gmvtl4rwK3Xyh9kyLla54NktmNac3FY81hz2cVFfoJZpmEGBR-rovRlR8V4Hb4QMLx1_aRwG3M0LWjMKq0TqEjQC3vTq-FDOziDtQBxkquFBalKYDKobZwoDvJcDJ-kHRPJF_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent flex items-end p-sm">
+<button class="bg-primary text-on-primary px-md py-xs rounded-full text-label-sm font-label-sm flex items-center gap-xs shadow-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="map">map</span>
+                    Open Offline Maps
+                </button>
+</div>
+</section>
+</main>
+<!-- Navigation Drawer (Side Nav - Hidden on Mobile normally, but structure provided) -->
+<aside class="fixed inset-y-0 left-0 z-[60] bg-surface dark:bg-surface-dim h-full w-80 rounded-r-xl shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden" id="nav-drawer">
+<div class="flex flex-col h-full py-lg">
+<div class="px-lg mb-lg">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<h3 class="text-title-lg font-title-lg text-on-surface">Vidyarthi User</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Rural Connectivity Portal</p>
+<p class="text-label-sm font-label-sm text-primary">Last Sync: 2 mins ago</p>
+</div>
+</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="bg-secondary-container text-on-secondary-container rounded-full mx-2 px-4 py-3 flex items-center gap-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-body-md font-body-md">Home</span>
+</a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-md hover:bg-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="local_taxi">local_taxi</span>
+<span class="text-body-md font-body-md">Nearby Transport</span>
+</a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-md hover:bg-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="text-body-md font-body-md">Offline Maps</span>
+</a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-md hover:bg-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-body-md font-body-md">Report History</span>
+</a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-md hover:bg-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span class="text-body-md font-body-md">App Settings</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-sm py-xs bg-surface-container border-t border-outline-variant">
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 scale-90 duration-75">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+<span class="text-label-sm font-label-sm">Routes</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-label-sm font-label-sm">History</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</button>
+</nav>
+<!-- FAB for quick action (Optional but contextual) -->
+<button class="fixed right-md bottom-24 w-14 h-14 bg-primary text-on-primary rounded-2xl shadow-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

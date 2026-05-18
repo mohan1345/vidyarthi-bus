@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f0fb",
+                        "outline-variant": "#c3c6d7",
+                        "on-surface": "#191b23",
+                        "on-tertiary-fixed": "#002109",
+                        "surface": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-fixed": "#dbe1ff",
+                        "on-background": "#191b23",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf8ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0053db",
+                        "secondary": "#505f76",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "on-surface-variant": "#434655",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e2ed",
+                        "tertiary-container": "#007e37",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f3f3fe",
+                        "on-primary-fixed": "#00174b",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#e1e2ed",
+                        "surface-container-high": "#e7e7f3",
+                        "on-secondary-container": "#54647a",
+                        "surface-bright": "#faf8ff",
+                        "tertiary": "#006229",
+                        "on-tertiary-container": "#c1ffc5",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3039",
+                        "surface-container": "#ededf9",
+                        "tertiary-fixed": "#6bff8f",
+                        "secondary-container": "#d0e1fb",
+                        "primary-container": "#2563eb",
+                        "outline": "#737686",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "primary": "#004ac6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "touch-target": "48px",
+                        "md": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "status-label": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "status-label": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .splash-gradient {
+            background: linear-gradient(135deg, #004ac6 0%, #006229 100%);
+        }
+        @keyframes spinner {
+            to {transform: rotate(360deg);}
+        }
+        .loading-spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #ffffff;
+            animation: spinner 0.8s linear infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<main class="relative h-screen w-full flex flex-col items-center justify-center splash-gradient px-md overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative flex flex-col items-center z-10">
+<div class="w-32 h-32 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mb-lg border border-white/20 shadow-2xl">
+<span class="material-symbols-outlined text-[64px] text-white" style="font-variation-settings: 'FILL' 1;">
+                    directions_bus
+                </span>
+</div>
+<div class="text-center">
+<h1 class="font-display-lg text-display-lg text-white mb-xs tracking-tight">
+                    Vidyarthi-Bus Local
+                </h1>
+<p class="font-body-lg text-body-lg text-white/80 font-medium">
+                    Offline Smart Crowd Alerts
+                </p>
+</div>
+</div>
+<div class="absolute bottom-xl flex flex-col items-center space-y-md">
+<div class="loading-spinner"></div>
+<div class="flex items-center space-y-1 flex-col">
+<span class="font-label-sm text-label-sm text-white/60 tracking-widest uppercase">
+                    Syncing Offline Data
+                </span>
+<div class="w-48 h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed w-2/3 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 pointer-events-none">
+<img class="hidden" data-alt="A clean, abstract architectural background featuring soft curves and minimalist patterns that evoke a sense of movement and transportation. The lighting is bright and ethereal, using a professional color palette of deep sapphire blue and vibrant forest green gradients. The overall mood is high-trust, dependable, and modern, perfectly suited for a student utility application in a light-mode environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBV6hjl7ZLqhYyci-KTt8EOUrQzPeZGXHcGnZXYkN0LawfHdS39SgPr6S1-H10q9IiR3Z7MCzY_Er90JPC4B6YnFBWp62kW4yJflNx9bjw7Fy4MBuzYJ-k1eojBNHaWwZo_xQCZRqpXnz8p3PY9-a0P4IU_6PDO0TEHwJUUFP4d79-cbZs0iaalUg-NSfiSWgLqISdiADI3_bACfL8RMbSjO14rYkRuSHBlmLZMLrVeooHyMY2cz25thcSvTSeKinrk4rFZiJikilh"/>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 w-full p-md text-center pointer-events-none">
+<p class="font-label-sm text-label-sm text-white/40">
+            © 2024 Rural Connectivity Portal
+        </p>
+</div>
+</body></html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vidyarthi-Bus | Report Status</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f0f0fb",
+                      "outline-variant": "#c3c6d7",
+                      "on-surface": "#191b23",
+                      "on-tertiary-fixed": "#002109",
+                      "surface": "#faf8ff",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#0b1c30",
+                      "primary-fixed": "#dbe1ff",
+                      "on-background": "#191b23",
+                      "on-tertiary": "#ffffff",
+                      "background": "#faf8ff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#0053db",
+                      "secondary": "#505f76",
+                      "on-tertiary-fixed-variant": "#005321",
+                      "tertiary-fixed-dim": "#4ae176",
+                      "on-surface-variant": "#434655",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e1e2ed",
+                      "tertiary-container": "#007e37",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "surface-dim": "#d9d9e5",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#d3e4fe",
+                      "surface-container-low": "#f3f3fe",
+                      "on-primary-fixed": "#00174b",
+                      "on-primary-container": "#eeefff",
+                      "surface-variant": "#e1e2ed",
+                      "surface-container-high": "#e7e7f3",
+                      "on-secondary-container": "#54647a",
+                      "surface-bright": "#faf8ff",
+                      "tertiary": "#006229",
+                      "on-tertiary-container": "#c1ffc5",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#b4c5ff",
+                      "surface-surface": "#2e3039",
+                      "surface-container": "#ededf9",
+                      "tertiary-fixed": "#6bff8f",
+                      "secondary-container": "#d0e1fb",
+                      "primary-container": "#2563eb",
+                      "outline": "#737686",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "primary": "#004ac6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "xl": "32px",
+                      "sm": "8px",
+                      "base": "4px",
+                      "touch-target": "48px",
+                      "md": "16px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "status-label": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "status-label": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="docked full-width top-0 bg-surface-container-low flex justify-between items-center w-full px-md h-touch-target sticky z-40">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="directions_bus">directions_bus</span>
+<h1 class="text-title-lg font-title-lg font-bold text-primary">Vidyarthi-Bus</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="wifi_off">wifi_off</span>
+</div>
+</header>
+<!-- Main Content Canvas (Crowd Meter Background State) -->
+<main class="flex-1 px-md py-lg overflow-y-auto">
+<section class="mb-lg">
+<h2 class="font-headline-md text-headline-md mb-md">Crowd Meter</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Bus Status Card Example (Background Context) -->
+<div class="bg-surface-container-low border border-outline-variant p-md rounded-xl">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-status-label text-status-label text-tertiary bg-tertiary/10 px-sm py-xs rounded-full">NEARLY EMPTY</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last updated 2m ago</span>
+</div>
+<div class="mb-lg">
+<h3 class="font-title-lg text-title-lg text-primary">Bus 101 - Hassan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Arriving in 5 mins</p>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[15%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant p-md rounded-xl">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-status-label text-status-label text-error bg-error/10 px-sm py-xs rounded-full">CROWDED</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last updated 10m ago</span>
+</div>
+<div class="mb-lg">
+<h3 class="font-title-lg text-title-lg text-primary">Bus 204 - Sakleshpur</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Arriving in 12 mins</p>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Asymmetric Map Section -->
+<div class="h-64 rounded-xl overflow-hidden relative border border-outline-variant">
+<img class="w-full h-full object-cover grayscale-[0.5] opacity-50" data-alt="A detailed digital transit map showing a rural Indian landscape with winding roads and small village markers. The aesthetic is clean and modern, using a light mode color palette with soft blues and grays. A bright blue line represents the active bus route 101 heading toward Hassan. The mood is functional, precise, and dependable for student navigation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXQWnkCGJ9KOCWhCvCI_WfRmrjlMUdaJr2FhdpY9qCB7hoqST1MaIY4lc77rFUstMFAPF-19k9EkJLIuEZ0_I__IfECb8ThA-NZoMhlUuxvX3YeOTTCWlqP0tG11hXwUQC-Et-WRulWP6UB2nideeJvuuely3aeS5hyfD2MOd26aoR7KIqTsda8RGc1cbzd-gRbjdnkHWmHuQ7d2IbEmmGuL-8JxWpvsU1pZDQzwbh1TV-b7QYaS9xztIGlryWUdDiM-xgTJ0ASLS7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent pointer-events-none"></div>
+<div class="absolute bottom-md left-md flex items-center bg-surface-container text-on-surface px-md py-sm rounded-lg shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-primary mr-sm" data-icon="location_on">location_on</span>
+<span class="font-label-sm text-label-sm">Tracking Bus 101 - Arriving Soon</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Inactive state logic applied) -->
+<nav class="fixed bottom-0 left-0 w-full z-30 flex justify-around items-center px-sm py-xs bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant rounded-xl transition-transform active:scale-90 duration-75">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 transition-transform active:scale-90 duration-75">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+<span class="font-label-sm text-label-sm">Routes</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant rounded-xl transition-transform active:scale-90 duration-75">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant rounded-xl transition-transform active:scale-90 duration-75">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</div>
+</nav>
+<!-- BOTTOM SHEET OVERLAY (THE REPORT STATUS POPUP) -->
+<div class="fixed inset-0 bg-black/40 z-50 flex flex-col justify-end">
+<!-- Sheet Handle Area (Clicking outside closes but we present the sheet) -->
+<div class="flex-1 w-full" onclick="/* close logic */"></div>
+<!-- Bottom Sheet Container -->
+<div class="bg-surface rounded-t-3xl w-full max-w-2xl mx-auto shadow-2xl flex flex-col animate-in slide-in-from-bottom duration-300">
+<!-- Drag Handle -->
+<div class="flex justify-center py-sm">
+<div class="w-10 h-1 bg-outline-variant rounded-full"></div>
+</div>
+<!-- Content -->
+<div class="px-lg pb-xl pt-sm">
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Update Crowd Status</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Route: Bus 101 - Hassan</p>
+</div>
+<!-- Selection Chips -->
+<div class="grid grid-cols-1 gap-md mb-xl">
+<!-- Chip 1: Nearly Empty -->
+<button class="flex items-center justify-between p-md rounded-xl border-2 border-tertiary/20 bg-tertiary/5 hover:bg-tertiary/10 transition-colors text-left active:scale-[0.98] duration-100">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-title-lg text-title-lg text-on-surface">Nearly Empty</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Plenty of seats available</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+<!-- Chip 2: Moderate -->
+<button class="flex items-center justify-between p-md rounded-xl border border-outline-variant hover:bg-surface-container transition-colors text-left active:scale-[0.98] duration-100">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="group">group</span>
+</div>
+<div>
+<p class="font-title-lg text-title-lg text-on-surface">Moderate</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Standing room only</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+<!-- Chip 3: Crowded -->
+<button class="flex items-center justify-between p-md rounded-xl border border-outline-variant hover:bg-surface-container transition-colors text-left active:scale-[0.98] duration-100">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-error-container" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="font-title-lg text-title-lg text-on-surface">Crowded</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Full capacity, hard to board</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</button>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-sm">
+<button class="flex-1 h-touch-target bg-primary text-on-primary rounded-xl font-title-lg text-title-lg active:scale-95 transition-transform">
+                        Confirm
+                    </button>
+<button class="flex-1 h-touch-target bg-transparent text-primary rounded-xl font-title-lg text-title-lg active:scale-95 transition-transform">
+                        Cancel
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>
