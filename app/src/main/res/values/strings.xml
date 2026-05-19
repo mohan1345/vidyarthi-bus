@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Vidyarthi-Bus</string>
+    <string name="tagline">Student bus travel companion</string>
+    <string name="home_title">Welcome to Vidyarthi Bus</string>
+    <string name="home_subtitle">Track routes, check crowd status, and report travel updates.</string>
+    <string name="primary_action">View routes</string>
 </resources>
