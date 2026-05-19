@@ -11,7 +11,8 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun projectMetadata_isConfigured() {
+        assertEquals("Vidyarthi-Bus", ProjectMetadata.DISPLAY_NAME)
+        assertEquals("com.example.vidyarthi_bus", ProjectMetadata.PACKAGE_NAME)
     }
 }
